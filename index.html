@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPO Survival Guide 😂</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#141E30,#243B55);
+overflow:hidden;
+color:white;
+}
+
+.slide{
+display:none;
+width:100vw;
+height:100vh;
+padding:40px 25px;
+text-align:center;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+animation:fade .8s;
+}
+
+.slide.active{
+display:flex;
+}
+
+h1{
+font-size:42px;
+margin-bottom:20px;
+}
+
+h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+p{
+font-size:22px;
+line-height:1.7;
+max-width:800px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(12px);
+box-shadow:0 0 20px rgba(0,0,0,.3);
+}
+
+.nextBtn{
+margin-top:35px;
+padding:14px 34px;
+border:none;
+border-radius:40px;
+font-size:20px;
+background:#00c6ff;
+background:linear-gradient(to right,#00c6ff,#0072ff);
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+.nextBtn:hover{
+transform:scale(1.08);
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="slide active">
+<div class="card">
+<h1>📞 BPO Survival Guide</h1>
+
+<p>
+For my dear sister... ❤️
+<br><br>
+Congratulations!
+<br>
+You officially traded
+<strong>peace of mind</strong>
+for a monthly salary. 💰😂
+<br><br>
+Tap below if you're emotionally prepared.
+</p>
+
+<button class="nextBtn" onclick="nextSlide()">Next ➜</button>
+</div>
+ </div>
+ <div class="slide">
+<div class="card">
+<h2>😡 The Customers</h2>
+
+<p>
+😊 Nice customers – They make your day.
+<br><br>
+
+😐 Confused customers – They ask where the power button is... while the device is ON.
+<br><br>
+
+😡 Angry customers – Somehow they think
+<strong>you personally caused every problem.</strong>
+<br><br>
+
+Remember:
+They're angry at the company...
+you're just the unlucky person who answered the call.
+</p>
+
+<button class="nextBtn" onclick="nextSlide()">Next ➜</button>
+</div>
+</div>
+
+<div class="slide">
+<div class="card">
+<h2>🎭 Your New Vocabulary</h2>
+
+<p>
+"I completely understand your concern."
+<br><br>
+
+Translation:
+"I've heard this exact complaint 57 times today."
+<br><br>
+
+"Please stay on the line."
+<br><br>
+
+Translation:
+"I'm secretly asking Google and my team leader for help."
+</p>
+
+<button class="nextBtn" onclick="nextSlide()">Next ➜</button>
+</div>
+</div>
+
+<div class="slide">
+<div class="card">
+<h2>☕ Break Time</h2>
+
+<p>
+15-minute break:
+<br><br>
+
+🚶 Walk to cafeteria – 4 min
+<br>
+
+☕ Wait for coffee – 6 min
+<br>
+
+📱 Scroll Instagram – 4 min
+<br>
+
+😌 Actual relaxation – 1 minute.
+<br><br>
+
+Enjoy it while it lasts.
+</p>
+
+<button class="nextBtn" onclick="nextSlide()">Next ➜</button>
+</div>
+</div>
+<div class="slide">
+<div class="card">
+<h2>👨‍💼 Team Leader</h2>
+
+<p>
+Customer:
+<br>
+"I want your supervisor!"
+<br><br>
+
+Team Leader:
+<br>
+*appears out of nowhere*
+<br><br>
+
+You:
+<br>
+"Please save me..."
+</p>
+
+<button class="nextBtn" onclick="nextSlide()">Next ➜</button>
+</div>
+</div>
+
+<div class="slide">
+<div class="card">
+<h2>💰 Salary Day</h2>
+
+<p>
+Day 1:
+"I'm rich!"
+<br><br>
+
+Day 3:
+Rent.
+Food.
+Recharge.
+Online shopping.
+<br><br>
+
+Bank Account:
+"See you next month."
+😂
+</p>
+
+<button class="nextBtn" onclick="nextSlide()">Next ➜</button>
+</div>
+</div>
+
+<div class="slide">
+<div class="card">
+<h2>❤️ One Last Thing...</h2>
+
+<p>
+Dear Sis,
+<br><br>
+
+Some customers will test your patience.
+Some will test your hearing.
+Some will test your faith in humanity.
+😂
+<br><br>
+
+Stay calm.
+Keep smiling.
+Use the mute button wisely.
+<br><br>
+
+You're stronger than you think.
+Good luck on your new journey!
+❤️
+</p>
+
+<button class="nextBtn" onclick="restartSlides()">Start Again 🔄</button>
+</div>
+</div>
+
+<script>
+let current=0;
+const slides=document.querySelectorAll(".slide");
+
+function nextSlide(){
+slides[current].classList.remove("active");
+current++;
+if(current>=slides.length) current=slides.length-1;
+slides[current].classList.add("active");
+}
+
+function restartSlides(){
+slides[current].classList.remove("active");
+current=0;
+slides[current].classList.add("active");
+}
+</script>
+
+</body>
+</html>
